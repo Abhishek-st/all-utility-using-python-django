@@ -43,7 +43,8 @@ def ide(request):
 
 
 def plaren(request):
-    return render(request, 'allutility/plag.html')
+    k={'s':1}
+    return render(request, 'allutility/plag.html',k)
 
 
 def plares(request):
@@ -57,7 +58,7 @@ def plares(request):
 
         response = requests.post('https://www.prepostseo.com/apis/checkPlag', data=data)
 
-        k = {'c': dat, 'o': response.json()}
+        k = {'c': dat, 'o': response.json(), 's':0}
         return render(request, 'allutility/plag.html', k)
 
 
