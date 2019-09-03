@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import requests
 import wikipedia
-import PyPDF2
+import pypandoc
 from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
@@ -86,6 +86,14 @@ def docres(request):
         fs = FileSystemStorage()
         fs.save(upfi.name, upfi)
 
-        return render(request, 'allutility/doc.html')
+        print(upfi.name)
+        print(upfi.content_type)
+
+        output = pypandoc.convert_file(f'./media/{upfi.name}', 'docx', outputfile="./media/somefile.odt", extra_args=['-V', 'geometry:margin=1.5cm', '--pdf-engine', '/usr/bin/xelatex'])
+        assert output == ""
+
+        s = './media/somefile.odt'
+        k = {'s': s, 'c': 1}
+        return render(request, 'allutility/doc.html',k)
         
 

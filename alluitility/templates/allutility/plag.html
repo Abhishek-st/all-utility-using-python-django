@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/static/styles.css" >
     <title>Hello, world!</title>
   </head>
   {% load static %}
@@ -55,15 +55,17 @@
               <form method="POST" action="{% url 'plares' %}"> {% csrf_token %}
                     <div class="mx-sm-3 mb-2">
                             {% if s %}
-                            <div class="form-group">  
-                              <textarea class="form-control mx-sm-3 mb-2 mt-3" id="exampleFormControlTextarea1" rows="19" name="cod">{{c}}</textarea>
+                            <div class="form-group col-11">  
+                              <textarea class="form-control mb-2 mt-3" id="exampleFormControlTextarea1" rows="19" name="cod">{{c}}</textarea>
+                              <button type="submit" class="btn btn-success mx-sm-3">SUBMIT</button>
                             </div>
-                            <button type="submit" class="btn btn-primary mx-sm-3 mb-2">SUBMIT</button>
+                            
                             {% endif %}
+                            {% if o.sources %}
                             <div class="mx-sm-3 ">
-                                <table class="table">
-                                  {% if o.sources %}
-                                    <thead>
+                                <table class="table table-hover">
+                                  
+                                    <thead class="thead-dark">
                                       <tr>
                                         
                                         <th scope="col">LINK</th>
