@@ -37,11 +37,27 @@ h5{
     color: aliceblue;
 }
 
+.hero1{
+    background: linear-gradient(to bottom right, #ffe259, #ffa751);
+    height:100%;
+    flex-direction: column;
+}
+
+.bt{
+    width:100%;
+    border: 2px solid black;
+}
+
+.ind{
+    background-color: rgba(0,0,0,0.1);
+}
+
 .menu{
     width:100%;
     background: yellow;
-    height: 40px;
+    height: 60px;
     word-spacing: 10px;
+    /* position: fixed; */
 }
 
 .menu ul{
@@ -156,4 +172,22 @@ h5{
     clear: both;
     content: "";
     display: table;
+}
+
+.wiki{
+    background: linear-gradient(to bottom right, #a8ff78, #78ffd6);
+    /* color:white; */
+    
+}
+
+.inwiki{
+    align-items: stretch;
+    border: 2px solid gray;
+    background: rgba(0,0,0,0.1);
+    padding: 10px 15px 10px 15px;
+    padding-left: 30px;
+    outline-style: ridge;
+    outline-color: yellow;
+    font-size: 1.5em;
+    word-spacing: 5px;
 }

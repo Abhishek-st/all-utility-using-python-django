@@ -7,11 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/static/styles.css" >
     <title>Hello, world!</title>
   </head>
   {% load static %}
   <body>
+    <div class="hero1">
+
 
       <div class="row sticky-top">
           <div class="col-12">
@@ -24,11 +26,9 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/ide/home">Home <span class="sr-only">(current)</span></a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
+
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           PRODUCT
@@ -53,28 +53,57 @@
 
 
       <form method="POST" action="{% url 'plag' %}"> {% csrf_token %}
-        <div class="mx-sm-3 mb-2">
-            <div class="row">
-                <div class="form-group col-8">
-                    
-                    <textarea class="form-control mx-sm-3 mb-2 mt-3" id="exampleFormControlTextarea1" rows="11" name="co">{{c}}</textarea>
-                </div>
-                
+
+
+        <div class="container mt-3 ind">
+          <div class="row align-items-center">
+            <div class="col-md-2 ">
+              <input type="submit" value="python3" name="lang" class="btn btn-primary bt" />
             </div>
-            
-            <div class="row">
-                <div class="col-4">
-                    <textarea class="form-control mx-sm-3 mb-2" id="exampleFormControlTextarea1" rows="6" name="input">{{i}}</textarea>
-                </div>
-                <div class="col-4">
-                        <textarea class="form-control mx-sm-3 mb-2" id="exampleFormControlTextarea1" rows="6" name="output">{{s.output}}</textarea>
-                </div>
-                
+            <div class="col-md-2">
+                <input type="submit" value="Csharp" name="lang" class="btn btn-primary bt" />
             </div>
-            <button type="submit" class="btn btn-primary mx-sm-3 mb-2">SUBMIT</button>
+            <div class="col-md-2">
+                <input type="submit" value="C" name="lang" class="btn btn-primary bt" />
+            </div>
+            <div class="col-md-2">
+                  <input type="submit" value="Cpp14" name="lang" class="btn btn-primary bt" />
+            </div>
+            <div class="col-md-2">
+                <input type="submit" value="Java" name="lang" class="btn btn-primary bt" />
+            </div>
+            <div class="col-md-2">
+              <input type="submit" value="Perl" name="lang" class="btn btn-primary bt" />
+            </div>
+          </div>
         </div>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    
+                    <textarea class="form-control mb-2 mt-3" id="exampleFormControlTextarea1" rows="11" name="co" placeholder="Write your code">{{c}}</textarea>
+                </div>
+                
+            </div>
+          </div>
+            
+            <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <textarea class="form-control mb-2" id="exampleFormControlTextarea1" rows="8" name="input" placeholder="your input goes here">{{i}}</textarea>
+                </div>
+                <div class="col-6">
+                        <textarea readonly class="form-control mb-2" id="exampleFormControlTextarea1" rows="8" name="output" placeholder="output">{{s.output}}</textarea>
+                </div>
+                
+            </div>
+          </div>
+
+
       </form>
+
+    </div>
       <!-- <a href="/media/Screenshot (2).png" download>download</a>  -->
 
     <!-- Optional JavaScript -->

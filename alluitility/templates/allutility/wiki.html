@@ -7,12 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/static/styles.css" >
     <title>Hello, world!</title>
   </head>
   {% load static %}
   <body>
 
+    <div class="wiki">
     
     <div class="row sticky-top">
       <div class="col-12">
@@ -25,11 +26,9 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="http://127.0.0.1:8000/ide/home">Home <span class="sr-only">(current)</span></a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
+
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       PRODUCT
@@ -53,13 +52,12 @@
     </div>
 
 
-      <div class="row mt-5">
-        <div class="col-2 mt-5"></div>
-        <div class="col-8">
-          <p class="text-justify font-weight-bold font-italic">{{content}}</p>
-        </div>
-
+    <div class="container inwiki">
+      <div class="row align-items-center">
+            <p>{{content}}</p>  
       </div>
+    </div>
+  </div>
 
 
       

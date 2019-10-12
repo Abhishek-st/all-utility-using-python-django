@@ -27,13 +27,14 @@ def ide(request):
 
         cod = request.POST['co']
         inp = request.POST['input']
+        lang = request.POST['lang']
 
-        print(cod)
+        print(lang)
 
         url = "https://ide.geeksforgeeks.org/main.php"
 
         data = {
-            'lang': 'python3',
+            'lang': lang,
             'code': cod,
             'input': inp,
             'save': True
@@ -63,6 +64,7 @@ def plares(request):
         response = requests.post('https://www.prepostseo.com/apis/checkPlag', data=data)
 
         k = {'c': dat, 'o': response.json(), 's':0}
+        print(response.json())
         return render(request, 'allutility/plag.html', k)
 
 
