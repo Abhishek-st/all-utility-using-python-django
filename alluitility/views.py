@@ -18,6 +18,10 @@ def index(request):
     return render(request, 'allutility/index.html', k)
 
 
+
+def home(request):
+    return render(request, 'allutility/home.html')
+
 def ide(request):
     if request.method == 'POST':
 
