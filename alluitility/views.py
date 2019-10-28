@@ -6,13 +6,6 @@ from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 def index(request):
-    data = {
-    'key': '2e4b0da059a449b3249f668e88d1bbec',
-    'data': 'Despite all the talk about Tendulkar’s failures under pressure, his performances in big events were difficult to ignore. In his two World Cup final appearances, Tendulkar flattered to deceive with scores of 4 (2003 final vs. Australia) and 18 (2011 final vs. Sri Lanka). Nevertheless, his overall performances and contributions over the course of the aforementioned tournaments played a huge part in getting India to the final in the first place'
-    }
-
-    response = requests.post('https://www.prepostseo.com/apis/checkPlag', data=data)
-    k = {'s': response.json()}
     k = {'s': "hello"}
 
     return render(request, 'allutility/index.html', k)
@@ -57,7 +50,7 @@ def plares(request):
         dat = request.POST['cod']
 
         data = {
-        'key': '2e4b0da059a449b3249f668e88d1bbec',
+        'key': 'ee78c85bc8505e964bca35ca7c966d4a',
         'data': dat
         }
 
