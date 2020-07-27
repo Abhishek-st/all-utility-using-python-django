@@ -1,5 +1,10 @@
 # all-utility-using-python-django
 
+<h2>Some snaps of the app</h2>
+<img src="https://github.com/Abhishek-st/all-utility-using-python-django/blob/master/assets/Screenshot%20from%202020-07-27%2012-39-52.png" />
+<img src="https://github.com/Abhishek-st/all-utility-using-python-django/blob/master/assets/Screenshot%20from%202020-07-27%2012-39-29.png" />
+<img src="https://github.com/Abhishek-st/all-utility-using-python-django/blob/master/assets/Screenshot%20from%202020-07-27%2012-40-20.png" />
+<img src="https://github.com/Abhishek-st/all-utility-using-python-django/blob/master/assets/Screenshot%20from%202020-07-27%2012-40-26.png" />
 Basic requirements : 
 1) Django
 2) wikipedia
